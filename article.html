@@ -6,25 +6,6 @@
     <title>Maquetacion para el Master en Frameworks</title>
     <link rel="stylesheet" type="text/css" href="assets/CSS/styles.css">
 
-    <script type="text/javascript">
-        window.addEventListener("load", function () {
-            var template = document.getElementById("article-template");
-
-            var articles = document.getElementById("articles");
-
-            for (var i = 2; i < 6; i++) {
-                var clonado = template.cloneNode(true);
-                clonado.removeAttribute("id");
-                var h2 = clonado.getElementsByTagName("h2")[0];
-                h2.innerHTML = h2.textContent + ' ' + i;
-
-                articles.appendChild(clonado);
-            }
-        })
-
-    </script>
-
-
 </head>
 
 <body>
@@ -65,34 +46,30 @@
 
     </header>
 
-    <div id="slider" class="slider-big">
-        <h1>Bienvenido al curso de React</h1>
-        <a href="#" class="btn-white">Ir al blog</a>
-    </div>
+   
 
     <!-- Contenido principal -->
     <div class="center">
         <section id="content">
-            <h2 class="subheader">Últimos articulos</h2>
-
-
-            <!-- listado de articulos -->
-            <div id="articles">
-                <article class="article-item" id="article-template">
+            
+                <article class="article-item article-detail" >
                     <div class="image-wrap">
                         <img src="https://mockupgratis.com/wp-content/uploads/2019/05/Mockup_Taza_Cafe%CC%81_Restaurante_mockupgratis.com_-1024x683.jpg"
                             alt="tasa-cafe">
                     </div>
-                    <h2>Articulo de prueba</h2>
+                    <h1 class="subheader">Articulo de prueba</h1>
                     <span class="date">
                         Hace 5 minutos
                     </span>
-                    <a href="article.html">Leer más</a>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, sequi aliquam. Exercitationem cum libero aperiam debitis recusandae numquam temporibus officia rerum sint laudantium, autem magnam tempore distinctio consectetur, optio quisquam doloremque quibusdam eligendi tenetur delectus. Nihil, corrupti excepturi neque sapiente quaerat dolores ducimus nisi, impedit totam laborum ratione voluptates aperiam.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero doloribus placeat a esse provident. Velit voluptatibus quod nulla vitae id sequi error, totam debitis incidunt inventore! Facere est optio quae laudantium, minima neque consequuntur quibusdam ducimus natus cum quia consectetur velit dolorem dicta voluptas, voluptatem ullam nulla magnam deleniti esse autem? Delectus commodi animi similique nostrum repudiandae laudantium ipsum rerum sapiente? Quidem amet consequuntur et possimus! Unde exercitationem aperiam expedita hic, nemo deserunt voluptatum quo vitae perferendis accusantium rem pariatur consequuntur provident obcaecati vero necessitatibus laudantium delectus eligendi accusamus eius dolorum modi totam repellendus! Quaerat sequi quae obcaecati architecto iste.
+                    </p>
                     <div class="clearfix"></div>
                 </article>
-                <!-- Añadir articulos via js-->
-
-            </div>
+               
 
         </section>
 

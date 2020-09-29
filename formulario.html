@@ -6,25 +6,6 @@
     <title>Maquetacion para el Master en Frameworks</title>
     <link rel="stylesheet" type="text/css" href="assets/CSS/styles.css">
 
-    <script type="text/javascript">
-        window.addEventListener("load", function () {
-            var template = document.getElementById("article-template");
-
-            var articles = document.getElementById("articles");
-
-            for (var i = 2; i < 6; i++) {
-                var clonado = template.cloneNode(true);
-                clonado.removeAttribute("id");
-                var h2 = clonado.getElementsByTagName("h2")[0];
-                h2.innerHTML = h2.textContent + ' ' + i;
-
-                articles.appendChild(clonado);
-            }
-        })
-
-    </script>
-
-
 </head>
 
 <body>
@@ -65,34 +46,41 @@
 
     </header>
 
-    <div id="slider" class="slider-big">
-        <h1>Bienvenido al curso de React</h1>
-        <a href="#" class="btn-white">Ir al blog</a>
-    </div>
+   
 
     <!-- Contenido principal -->
     <div class="center">
         <section id="content">
-            <h2 class="subheader">Últimos articulos</h2>
+            
+            <h1 class="subheader">Formulario</h1>
 
+            <form class="mid-form">
+                <div class="form-group">
+                    <label for="nombre">Name</label>
+                    <input type="text" name="nombre" />
+                </div>
 
-            <!-- listado de articulos -->
-            <div id="articles">
-                <article class="article-item" id="article-template">
-                    <div class="image-wrap">
-                        <img src="https://mockupgratis.com/wp-content/uploads/2019/05/Mockup_Taza_Cafe%CC%81_Restaurante_mockupgratis.com_-1024x683.jpg"
-                            alt="tasa-cafe">
-                    </div>
-                    <h2>Articulo de prueba</h2>
-                    <span class="date">
-                        Hace 5 minutos
-                    </span>
-                    <a href="article.html">Leer más</a>
-                    <div class="clearfix"></div>
-                </article>
-                <!-- Añadir articulos via js-->
+                <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" name="apellidos" />
+                </div>
+                <div class="form-group">
+                    <label for="bio">Biografia</label>
+                    <textarea name="bio"></textarea>
+                </div>
+                <div class="form-group radiobuttons">
+                   <input type="radio" name="genero" value="hombre"/>Hombre 
+                   <input type="radio" name="genero" value="mujer"/>Mujer 
+                   <input type="radio" name="genero" value="otro"/>Otro
+                </div>
 
-            </div>
+                <div class="clearfix"></div>
+
+                <input type="submit" value="enviar" class="btn btn-success" />
+                <div class="clearfix"></div>
+            </form>
+               
+               
 
         </section>
 
